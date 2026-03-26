@@ -27,18 +27,42 @@ export default function RootLayout({
             <Link href="/" className="text-xl font-bold text-blue-600">
               🧰 ToolBox
             </Link>
-            <nav className="flex items-center gap-6 text-sm">
+            <nav className="flex items-center gap-4 text-sm overflow-x-auto">
               <Link
                 href="/"
-                className="text-gray-600 hover:text-blue-600 transition-colors"
+                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
               >
                 首页
               </Link>
               <Link
                 href="/tools/json-formatter"
-                className="text-gray-600 hover:text-blue-600 transition-colors"
+                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
               >
-                JSON 格式化
+                JSON
+              </Link>
+              <Link
+                href="/tools/base64"
+                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
+              >
+                Base64
+              </Link>
+              <Link
+                href="/tools/url-encoder"
+                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
+              >
+                URL
+              </Link>
+              <Link
+                href="/tools/timestamp"
+                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
+              >
+                时间戳
+              </Link>
+              <Link
+                href="/tools/color-converter"
+                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
+              >
+                颜色
               </Link>
             </nav>
           </div>

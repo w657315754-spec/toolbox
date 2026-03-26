@@ -7,7 +7,30 @@ const tools = [
     href: "/tools/json-formatter",
     icon: "{ }",
   },
-  // 后续工具在此追加
+  {
+    name: "Base64 编解码",
+    description: "文本与 Base64 互转，支持文件拖拽编码，纯浏览器端处理。",
+    href: "/tools/base64",
+    icon: "B64",
+  },
+  {
+    name: "URL 编解码",
+    description: "URL 编码与解码，支持 encodeURIComponent / encodeURI 两种模式。",
+    href: "/tools/url-encoder",
+    icon: "%20",
+  },
+  {
+    name: "时间戳转换",
+    description: "Unix 时间戳与日期互转，支持秒/毫秒切换，实时显示当前时间戳。",
+    href: "/tools/timestamp",
+    icon: "⏱",
+  },
+  {
+    name: "颜色转换",
+    description: "HEX、RGB、HSL 颜色格式互转，实时预览，一键复制 CSS 格式。",
+    href: "/tools/color-converter",
+    icon: "🎨",
+  },
 ];
 
 export default function HomePage() {

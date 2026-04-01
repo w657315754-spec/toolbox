@@ -4,12 +4,27 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "ToolBox - 免费在线开发工具集",
+    default: "ToolBox - Free Online Developer Tools",
     template: "%s | ToolBox",
   },
   description:
-    "ToolBox 提供免费、快速、无需注册的在线开发工具，包括 JSON 格式化、编码转换等。",
+    "ToolBox provides free, fast, no-signup online developer tools including JSON formatter, encoding converters, hash generators, and more.",
 };
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/tools/json-formatter", label: "JSON" },
+  { href: "/tools/base64", label: "Base64" },
+  { href: "/tools/url-encoder", label: "URL" },
+  { href: "/tools/timestamp", label: "Timestamp" },
+  { href: "/tools/color-converter", label: "Color" },
+  { href: "/tools/hash-generator", label: "Hash" },
+  { href: "/tools/uuid-generator", label: "UUID" },
+  { href: "/tools/regex-tester", label: "Regex" },
+  { href: "/tools/jwt-decoder", label: "JWT" },
+  { href: "/tools/password-generator", label: "Password" },
+  { href: "/tools/text-diff", label: "Diff" },
+];
 
 export default function RootLayout({
   children,
@@ -17,53 +32,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
-        {/* === Ad Slot: Top Banner === */}
-        {/* <div className="w-full h-[90px] bg-gray-100 flex items-center justify-center text-sm text-gray-400">Ad Banner</div> */}
-
         <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold text-blue-600">
+            <Link href="/" className="text-xl font-bold text-blue-600 shrink-0">
               🧰 ToolBox
             </Link>
-            <nav className="flex items-center gap-4 text-sm overflow-x-auto">
-              <Link
-                href="/"
-                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
-              >
-                首页
-              </Link>
-              <Link
-                href="/tools/json-formatter"
-                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
-              >
-                JSON
-              </Link>
-              <Link
-                href="/tools/base64"
-                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
-              >
-                Base64
-              </Link>
-              <Link
-                href="/tools/url-encoder"
-                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
-              >
-                URL
-              </Link>
-              <Link
-                href="/tools/timestamp"
-                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
-              >
-                时间戳
-              </Link>
-              <Link
-                href="/tools/color-converter"
-                className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
-              >
-                颜色
-              </Link>
+            <nav className="flex items-center gap-3 text-sm overflow-x-auto ml-6 scrollbar-hide">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-600 hover:text-blue-600 transition-colors shrink-0"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </header>

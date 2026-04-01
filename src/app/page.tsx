@@ -2,34 +2,94 @@ import Link from "next/link";
 
 const tools = [
   {
-    name: "JSON 格式化",
-    description: "在线 JSON 格式化、压缩、校验工具，支持语法错误高亮提示。",
+    name: "JSON Formatter",
+    description: "Format, minify, and validate JSON with syntax error highlighting.",
     href: "/tools/json-formatter",
     icon: "{ }",
   },
   {
-    name: "Base64 编解码",
-    description: "文本与 Base64 互转，支持文件拖拽编码，纯浏览器端处理。",
+    name: "Base64 Encoder/Decoder",
+    description: "Encode text to Base64 or decode Base64 strings. Supports file drag & drop.",
     href: "/tools/base64",
     icon: "B64",
   },
   {
-    name: "URL 编解码",
-    description: "URL 编码与解码，支持 encodeURIComponent / encodeURI 两种模式。",
+    name: "URL Encoder/Decoder",
+    description: "URL encode and decode with encodeURIComponent / encodeURI modes.",
     href: "/tools/url-encoder",
     icon: "%20",
   },
   {
-    name: "时间戳转换",
-    description: "Unix 时间戳与日期互转，支持秒/毫秒切换，实时显示当前时间戳。",
+    name: "Timestamp Converter",
+    description: "Convert between Unix timestamps and human-readable dates. Supports seconds & milliseconds.",
     href: "/tools/timestamp",
     icon: "⏱",
   },
   {
-    name: "颜色转换",
-    description: "HEX、RGB、HSL 颜色格式互转，实时预览，一键复制 CSS 格式。",
+    name: "Color Converter",
+    description: "Convert between HEX, RGB, and HSL color formats with live preview.",
     href: "/tools/color-converter",
     icon: "🎨",
+  },
+  {
+    name: "Hash Generator",
+    description: "Compute MD5, SHA-1, SHA-256, and SHA-512 hashes instantly in your browser.",
+    href: "/tools/hash-generator",
+    icon: "#️⃣",
+  },
+  {
+    name: "UUID Generator",
+    description: "Generate random UUID v4 identifiers. Supports bulk generation.",
+    href: "/tools/uuid-generator",
+    icon: "🆔",
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    description: "Generate placeholder text for your designs and mockups.",
+    href: "/tools/lorem-ipsum",
+    icon: "📝",
+  },
+  {
+    name: "Markdown Preview",
+    description: "Write Markdown and see the rendered HTML preview in real time.",
+    href: "/tools/markdown-preview",
+    icon: "📄",
+  },
+  {
+    name: "Regex Tester",
+    description: "Test regular expressions with real-time match highlighting and group extraction.",
+    href: "/tools/regex-tester",
+    icon: ".*",
+  },
+  {
+    name: "JWT Decoder",
+    description: "Decode and inspect JSON Web Token header, payload, and signature.",
+    href: "/tools/jwt-decoder",
+    icon: "🔑",
+  },
+  {
+    name: "HTML Entity Encoder",
+    description: "Encode special characters to HTML entities or decode them back.",
+    href: "/tools/html-entity",
+    icon: "&lt;",
+  },
+  {
+    name: "Number Base Converter",
+    description: "Convert numbers between binary, octal, decimal, and hexadecimal.",
+    href: "/tools/number-base",
+    icon: "0x",
+  },
+  {
+    name: "Password Generator",
+    description: "Generate strong, random passwords with customizable length and character sets.",
+    href: "/tools/password-generator",
+    icon: "🔒",
+  },
+  {
+    name: "Text Diff",
+    description: "Compare two blocks of text side by side with highlighted differences.",
+    href: "/tools/text-diff",
+    icon: "±",
   },
 ];
 
@@ -38,10 +98,10 @@ export default function HomePage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <section className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-          免费在线开发工具集
+          Free Online Developer Tools
         </h1>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-          快速、免费、无需注册。所有工具均在浏览器本地运行，数据不会上传到服务器。
+          Fast, free, no sign-up required. All tools run locally in your browser — your data never leaves your device.
         </p>
       </section>
 
@@ -62,9 +122,6 @@ export default function HomePage() {
           </Link>
         ))}
       </div>
-
-      {/* === Ad Slot: Below Tool Cards === */}
-      {/* <div className="mt-12 h-[250px] bg-gray-100 rounded-lg flex items-center justify-center text-sm text-gray-400">Ad Slot</div> */}
     </div>
   );
 }
